@@ -3,6 +3,7 @@ package com.example.sqliteapplication;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -102,20 +103,22 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
 
-                    StringBuffer buffer = new StringBuffer();
+                    /*StringBuffer buffer = new StringBuffer();
                     while(res.moveToNext()){
                         buffer.append("Name: "+res.getString(0)+"\n");
                         buffer.append("Content: "+res.getString(1)+"\n");
-                        buffer.append("Date of Birth: "+res.getString(2)+"\n\n\n");
+                        buffer.append("Date of Birth: "+res.getString(2)+"\n\n\n");*/
+                    Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
+                    startActivity(intent);
                     }
 
-                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    /*AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setCancelable(true);
                     builder.setTitle("Results");
                     builder.setMessage(buffer.toString());
-                    builder.show();
+                    builder.show();*/
                 }
-            }
+
         });
 
 

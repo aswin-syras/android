@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                         buffer.append("Name: "+res.getString(0)+"\n");
                         buffer.append("Content: "+res.getString(1)+"\n");
                         buffer.append("Date of Birth: "+res.getString(2)+"\n\n\n");*/
-                    Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
+                    Intent intent= new Intent(getApplicationContext(),ViewDetails.class);
                     startActivity(intent);
                     }
 

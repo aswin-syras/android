@@ -90,7 +90,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public Cursor getdata(){
-        SQLiteDatabase DB = this.getWritableDatabase();
+        SQLiteDatabase DB = this.getReadableDatabase();
         Cursor cursor = DB.rawQuery("Select * from Userdetails", null) ;
 
         return cursor;

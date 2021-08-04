@@ -32,7 +32,7 @@ public class ViewDetails extends AppCompatActivity {
 
         }else{
             while (cursor.moveToNext()) {
-                list.add(cursor.getString(0));
+                list.add("Name: "+cursor.getString(0)+"\n"+"Phone"+cursor.getString(1)+"\n"+"Date of Birth:" +cursor.getString(2));
                 ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,list);
                 listView.setAdapter(listAdapter);
             }
